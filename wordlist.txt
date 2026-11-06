@@ -2,3 +2,9 @@ elephant
 tortuga
 gato
 pez
+perro
+vaca
+oveja
+cordero
+chancho jabali
+pez espada
