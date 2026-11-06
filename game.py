@@ -10,19 +10,24 @@ class HangmanGame:
 
     def display_progress(self):
         """
-        Construye y devuelve el estado actual de la palabra (ej. "_ _ e _ _ a _ _").
+        Muestra la palabra revelando letras adivinadas y dejando 
+        visibles automáticamente los caracteres que NO son letras (guiones, espacios, etc.).
         """
         display = []
-        
-        # Bucle para construir la palabra oculta basándose en las letras adivinadas<a data-citation-id="e865c382-9828-4de0-9f34-08f9035bb83b" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >e865c382-9828-4de0-9f34-08f9035bb83b</span>2</a>
-        for letter in self.word:
-            if letter in self.guessed_letters:
-                display.append(letter)
+        for char in self.word:
+            # 1. Si es una letra alfabética, comprobamos si ya fue adivinada<a data-citation-id="24b53d41-3198-4a68-ace6-c528d34c1b68" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >24b53d41-3198-4a68-ace6-c528d34c1b68</span>1</a>
+            if char.isalpha():
+                if char in self.guessed_letters:
+                    display.append(char)
+                else:
+                    display.append("_")
+            # 2. Si NO es una letra (espacio, guion, número), se muestra directamente<a data-citation-id="e865c382-9828-4de0-9f34-08f9035bb83b" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >e865c382-9828-4de0-9f34-08f9035bb83b</span>2</a>
             else:
-                display.append("_")
+                display.append(char)
         
-        # Unir los caracteres con espacios para mejorar la visualización
+        # Unimos todo con espacios para que se vea claro en la consola
         return " ".join(display)
+    
     def process_guess(self, letter):
         """
         Procesa la letra adivinada por el usuario.
