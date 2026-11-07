@@ -30,7 +30,7 @@ def show_game_status(game):
     """
     Muestra el estado visual del juego: progreso, letras usadas y errores.
     """
-    print(f"\nProgreso: {game.display_progress()}") #<a data-citation-id="e865c382-9828-4de0-9f34-08f9035bb83b" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >e865c382-9828-4de0-9f34-08f9035bb83b</span>3</a>
+    print(f"\nProgreso: {game.display_progress()}") 
     
     intentos = ", ".join(game.guessed_letters) if game.guessed_letters else "Ninguna"
     print(f"Letras adivinadas: {intentos}")
