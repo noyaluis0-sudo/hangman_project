@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 from utils import get_random_word
 from game import HangmanGame
 
