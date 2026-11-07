@@ -4,6 +4,7 @@
 from utils import get_random_word
 from game import HangmanGame
 
+
 def get_user_input(game):
     """
     Solicita una letra al usuario y la valida.
@@ -26,23 +27,26 @@ def get_user_input(game):
 
         return guess
 
+
 def show_game_status(game):
     """
     Muestra el estado visual del juego: progreso, letras usadas y errores.
     """
-    print(f"\nProgreso: {game.display_progress()}") 
-    
-    intentos = ", ".join(game.guessed_letters) if game.guessed_letters else "Ninguna"
+    print(f"\nProgreso: {game.display_progress()}")
+
+    intentos = ", ".join(
+        game.guessed_letters) if game.guessed_letters else "Ninguna"
     print(f"Letras adivinadas: {intentos}")
-    
+
     intentos_restantes = game.max_errors - game.errors
     print(f"Intentos restantes: {intentos_restantes}")
     print("-" * 30)
 
+
 def main():
     # 1. Obtener una palabra aleatoria de utils.py
     target_word = get_random_word()
-    
+
     if not target_word:
         print("Error: No se pudo cargar ninguna palabra. Revisa wordlist.txt.")
         return
@@ -52,12 +56,13 @@ def main():
     print("¡Bienvenido al juego del Ahorcado!")
 
     # 3. Bucle principal del juego
-    # El juego sigue mientras no se superen los errores y queden guiones por completar
+    # El juego sigue mientras no se superen los errores y queden guiones por
+    # completar
     while game.errors < game.max_errors and "_" in game.display_progress():
         show_game_status(game)
-        
+
         letra = get_user_input(game)
-        
+
         if game.process_guess(letra):
             print(f"¡Excelente! La letra '{letra}' está en la palabra.")
         else:
@@ -69,6 +74,7 @@ def main():
     else:
         print(f"\nGame Over. Te has quedado sin intentos.")
         print(f"La palabra secreta era: {game.word}")
+
 
 if __name__ == "__main__":
     main()
