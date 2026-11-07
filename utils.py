@@ -27,7 +27,7 @@ def get_random_word():
 
     except FileNotFoundError:
         # Manejo de error en caso de que el archivo no exista<a
-        
+
         print("Error: El archivo wordlist.txt no fue encontrado.")
 
         return None
