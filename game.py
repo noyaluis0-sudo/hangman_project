@@ -6,7 +6,7 @@ class HangmanGame:
         Inicializa el estado del juego del ahorcado.
         """
         self.word = word.lower()           # La palabra objetivo
-        self.guessed_letters = []          # Lista de letras adivinadas<a data-citation-id="01a15ab8-6711-7193-91f8-6d68c01fb6a6" class="source-message-chip source-message-chip-node color-note source-message-chip-note" ><span class="dis-none source-message-chip-id" >01a15ab8-6711-7193-91f8-6d68c01fb6a6</span><i class="icon-note"></i></a>
+        self.guessed_letters = []          # Lista de letras adivinadas
         self.max_errors = 6                # Límite máximo de errores
         self.errors = 0                    # Contador de respuestas incorrectas
 
@@ -17,13 +17,13 @@ class HangmanGame:
         """
         display = []
         for char in self.word:
-            # 1. Si es una letra alfabética, comprobamos si ya fue adivinada<a data-citation-id="24b53d41-3198-4a68-ace6-c528d34c1b68" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >24b53d41-3198-4a68-ace6-c528d34c1b68</span>1</a>
+            # 1. Si es una letra alfabética, comprobamos si ya fue adivinada
             if char.isalpha():
                 if char in self.guessed_letters:
                     display.append(char)
                 else:
                     display.append("_")
-            # 2. Si NO es una letra (espacio, guion, número), se muestra directamente<a data-citation-id="e865c382-9828-4de0-9f34-08f9035bb83b" class="source-message-chip source-message-chip-chunk" ><span class="dis-none source-message-chip-id" >e865c382-9828-4de0-9f34-08f9035bb83b</span>2</a>
+            # 2. Si NO es una letra (espacio, guion, número), se muestra directamente
             else:
                 display.append(char)
         
