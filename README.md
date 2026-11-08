@@ -5,12 +5,12 @@ La idea principal del juego es encontrar la palabra oculta, intentando adivinarl
 
 2. ¿Cómo se juega?
 
-a. Al inicio aparece un una palabra oculta representada por guiones bajos (_ _ _ _) que corresponden a las letras correspondientes. 
-b. En cada turno, debes de escribir una letra y dar Enter. No puedes utilizar símbolos ni números, solo se aceptan letras y no se pueden repetir. 
-c. Si la letra que escribiste pertenece a la palabra, aparecerá en todas las posiciones de la palabra donde aparece (por ejemplo _ a _ a _ _ _)
-d. Si la letra no pertenece a la palabra, cuenta como un error y lo podrás ver en el contador. Tienes un máximo de 6 errores, si llegas a 6 pierdes y verás la palabra oculta.
-e. Podrás ir viendo el progreso de la partida, incluyendo: el progreso de la palabra, las letras que ya adivinaste y los intentos que te quedan.
-f. Ganas el juego si logras completar la palabra antes de llegar a 6 errores. 
+  - Al inicio aparece un una palabra oculta representada por guiones bajos (_ _ _ _) que corresponden a las letras correspondientes. 
+  - En cada turno, debes de escribir una letra y dar Enter. No puedes utilizar símbolos ni números, solo se aceptan letras y no se pueden repetir. 
+  - Si la letra que escribiste pertenece a la palabra, aparecerá en todas las posiciones de la palabra donde aparece (por ejemplo _ a _ a _ _ _)
+  - Si la letra no pertenece a la palabra, cuenta como un error y lo podrás ver en el contador. Tienes un máximo de 6 errores, si llegas a 6 pierdes y verás la palabra oculta.
+  - Podrás ir viendo el progreso de la partida, incluyendo: el progreso de la palabra, las letras que ya adivinaste y los intentos que te quedan.
+  - Ganas el juego si logras completar la palabra antes de llegar a 6 errores. 
 
 # Hangman Project — Descripción por archivos
 
