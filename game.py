@@ -2,61 +2,43 @@
 
 class HangmanGame:
     def __init__(self, word):
-        """
-        Inicializa el estado del juego del ahorcado.
-        """
-        self.word = word.lower()           # La palabra objetivo
-        self.guessed_letters = []          # Lista de letras adivinadas
-        self.max_errors = 6                # Límite máximo de errores
-        self.errors = 0                    # Contador de respuestas incorrectas
+        self.word = word.lower()
+        self.guessed_letters = []
+        self.max_errors = 6
+        self.errors = 0
 
     def display_progress(self):
         """
-        Muestra la palabra revelando letras adivinadas y dejando
-        visibles automáticamente los caracteres
-        que NO son letras (guiones, espacios, etc.).
+        Genera la cadena a mostrar. Los caracteres que no son letras
+        (guiones, espacios) se muestran automáticamente.
         """
         display = []
-
         for char in self.word:
-            # 1. Si es una letra alfabética, comprobamos si ya fue adivinada
             if char.isalpha():
                 if char in self.guessed_letters:
                     display.append(char)
                 else:
                     display.append("_")
-
-            # 2. Si NO es una letra (espacio, guion, número), se muestra
-            # directamente
-
             else:
+                # Se muestra automáticamente si es espacio, guion, etc.
                 display.append(char)
-
-        # Unimos todo con espacios para que se vea claro en la consola
-
         return " ".join(display)
 
-    def process_guess(self, letter):
-        """
-        Procesa la letra adivinada por el usuario.
-        """
-        letter = letter.lower()  # Asegurarse de que la letra esté en minúscula
-
-        if letter in self.word:
-            self.guessed_letters.append(letter)
-            return True  # Adivinanza correcta
-        else:
+    def make_guess(self, letter):
+        """Procesa el intento del jugador y actualiza los errores."""
+        self.guessed_letters.append(letter)
+        if letter not in self.word:
             self.errors += 1
-            return False  # Adivinanza incorrecta
+            return False
+        return True
 
     def is_won(self):
-        """
-        Verifica si el jugador ha ganado (todas las letras adivinadas).
-        """
-        return all(letter in self.guessed_letters for letter in self.word)
+        """Verifica si todas las letras alfabéticas han sido adivinadas."""
+        for char in self.word:
+            if char.isalpha() and char not in self.guessed_letters:
+                return False
+        return True
 
-    def is_lost(self):
-        """
-        Verifica si el jugador ha perdido (superó el número máximo de errores).
-        """
-        return self.errors >= self.max_errors
+    def is_over(self):
+        """El juego termina por victoria o por exceso de errores."""
+        return self.is_won() or self.errors >= self.max_errors
