@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Este módulo es donde comienza el juego."""
+"""Este módulo contiene la lógica principal del juego."""
 
 class HangmanGame:
     def __init__(self, word):
