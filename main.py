@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""En este módulo comienza el juego"""
 
 from utils import get_random_word, get_user_input, show_game_status
 from game import HangmanGame
