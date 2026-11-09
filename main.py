@@ -3,6 +3,7 @@
 from utils import get_random_word, get_user_input, show_game_status
 from game import HangmanGame
 
+
 def main():
     # 1. Preparación: Cargar palabra
     secret_word = get_random_word()
@@ -18,7 +19,7 @@ def main():
     while not game.is_over():
         show_game_status(game)
         guess = get_user_input(game)
-        
+
         if game.make_guess(guess):
             print(f"¡Bien! La letra '{guess}' está en la palabra.")
         else:
@@ -31,6 +32,7 @@ def main():
     else:
         print(f"\n¡GAME OVER! Te has quedado sin intentos.")
         print(f"La palabra era: {game.word}")
+
 
 if __name__ == "__main__":
     main()
