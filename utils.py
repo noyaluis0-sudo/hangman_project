@@ -2,8 +2,8 @@
 """Este módulo incluye funciones auxiliares como validar la entrada o
 mostrar el estado actual del juego"""
 
-
 import random
+
 
 def get_random_word(filename="wordlist.txt"):
     """
