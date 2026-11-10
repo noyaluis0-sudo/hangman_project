@@ -24,9 +24,9 @@ El proyecto está organizado en módulos que separan la lógica del juego, las f
 2. game.py: Contiene la clase HangmanGame, responsable de administrar la lógica del juego. Sus métodos principales son:
    - init(): Inicializa la partida y sus atributos.
    - display_progress(): Muestra el progreso de la palabra.
-   -  make_guess(): Procesa los intentos del jugador.
-   -  is_won(): Comprueba si el jugador adivinó la palabra.
-   -  is_over(): Determina si la partida terminó.
+   - make_guess(): Procesa los intentos del jugador.
+   - is_won(): Comprueba si el jugador adivinó la palabra.
+   - is_over(): Determina si la partida terminó.
 
 3. utils.py: Contiene funciones auxiliares e importa el módulo random para seleccionar palabras aleatorias. Sus funciones principales son:
    - get_random_word(): Obtiene una palabra aleatoria desde el archivo de palabras.
