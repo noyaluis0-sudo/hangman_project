@@ -34,7 +34,7 @@ El proyecto está organizado en módulos que separan la lógica del juego, las f
 4. wordlist.txt
 Es un archivo de texto que contiene las palabras que se van a utilizar en el juego, contiene 50 peliculas, aquellas que tienen mas de una palabra estan separadas por un guion.
 
-\
+
 
 
 
