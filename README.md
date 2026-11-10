@@ -19,7 +19,7 @@ El proyecto está organizado en módulos que separan la lógica del juego, las f
 
 1. main.py: Es el punto de entrada del programa. Importa los módulos utils y game. Se encarga de coordinar el desarrollo de la partida. Su función principal es main(), que inicializa el juego, gestiona los intentos y determina el resultado final.
 
--  El bloque if __name__ == "__main__": asegura que main() solo se ejecute si se corre el archivo directamente, y no si se importa como módulo.
+   - El bloque if __name__ == "__main__": asegura que main() solo se ejecute si se corre el archivo directamente, y no si se importa como módulo.
 
 2. game.py: Contiene la clase HangmanGame, responsable de administrar la lógica del juego. Sus métodos principales son:
    - init(): Inicializa la partida y sus atributos.
