@@ -36,4 +36,15 @@ Es un archivo de texto que contiene las palabras que se van a utilizar en el jue
 
 
 
-\n El bloque if __name__ == "__main__": asegura que main() solo se ejecute si se corre el archivo directamente, y no si se importa como módulo.
+
+
+
+
+
+
+
+
+
+
+
+El bloque if __name__ == "__main__": asegura que main() solo se ejecute si se corre el archivo directamente, y no si se importa como módulo.
