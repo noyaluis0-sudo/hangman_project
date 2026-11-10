@@ -30,8 +30,8 @@ El proyecto está organizado en módulos que separan la lógica del juego, las f
    - get_random_word(): Obtiene una palabra aleatoria desde el archivo de palabras.
    - get_user_input(): Solicita y valida las letras ingresadas por el usuario.
    - show_game_status(): Muestra el estado actual de la partida y las estadísticas.
-
-4.wordlist.txt
+   
+4. wordlist.txt
 Es un archivo de texto que contiene las palabras que se van a utilizar en el juego, contiene 50 peliculas, aquellas que tienen mas de una palabra estan separadas por un guion.
 
 El bloque if __name__ == "__main__": asegura que main() solo se ejecute si se corre el archivo directamente, y no si se importa como módulo.
